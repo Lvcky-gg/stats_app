@@ -30,3 +30,14 @@ body {
     font-size:20px;
     margin:0 1%;
 }
+.tables{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:2% 5%;
+}
+.tables>table{
+    width:45%;
+    border-collapse: collapse;
+    
+}
