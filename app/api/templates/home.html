@@ -1,3 +1,33 @@
 {% extends 'index.html' %} {% block content %} {% for div in divisions %}
-<div>{{div.name}}</div>
+<div>
+  {% comment %} <h2>{{ div.name }}</h2> {% endcomment %}
+  <table>
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>W</th>
+        <th>L</th>
+        {% comment %} <th>P</th> {% endcomment %}
+        <th>Pct</th>
+        <th>GB</th>
+        <th>L10</th>
+        <th>DIFF</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in div.div %}
+      <tr>
+        <td>{{ team.team.name }}</td>
+        <td>{{ team.leagueRecord.wins }}</td>
+        <td>{{ team.leagueRecord.losses}}</td>
+        {% comment %} <td>{{ team.leagueRecord.ties }}</td> {% endcomment %}
+        <td>{{ team.leagueRecord.pct }}</td>
+        <td>{{ team.gb }}</td>
+        <td> {{team.l10Record.wins}}-{{team.l10Record.losses}}</td>
+        <td>{{ team.diff }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</div>
+
 {% endfor %} {% endblock %}

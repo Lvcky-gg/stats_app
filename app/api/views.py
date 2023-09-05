@@ -37,9 +37,12 @@ def home(response):
     for i in range(len(Standings)):
         teamStanding = Standings[i]['teamRecords']
 
-        
+      # To calculate GB between the first place and other teams, use the formula (Difference in wins + Difference in losses) / 2
+      # FIND GB AND APPEND IT TO TEAM
+      #   Last 10 must be added to team 5 - 5
+      #  DIFF must be added to team
         for k in range(len(teamStanding)):
-            team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord']}
+            team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], "l10Record":teamStanding[k]['records']['splitRecords'][8], "diff":teamStanding[k]['runDifferential'], "gb":teamStanding[k]["gamesBack"]}
             if teamStanding[k]['team']['name'] in alEastNames:
                 ale.append(team)
             elif teamStanding[k]['team']['name'] in nlEastNames:
@@ -52,7 +55,6 @@ def home(response):
                 alw.append(team)
             elif teamStanding[k]['team']['name'] in nlWestNames:
                 nlw.append(team)
-
     
 
        
