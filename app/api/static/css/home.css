@@ -30,7 +30,15 @@ body {
     font-size:20px;
     margin:0 1%;
 }
-.tables{
+.tablesDiv{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:5%;
+    gap: 15px;
+}
+/* .tables{
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -40,4 +48,4 @@ body {
     width:45%;
     border-collapse: collapse;
     
-}
+} */
