@@ -40,6 +40,16 @@ h1, h2, h3, h4, h5, h6, th {
     margin:5%;
     gap: 15px;
 }
+.team-container{
+    width:80%;
+    margin:auto;
+}
+.header-teams{
+    position: relative;
+    top: 1.6em;
+    left: 2em;
+
+}
 /* .tables{
     display:flex;
     justify-content: space-between;

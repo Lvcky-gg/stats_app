@@ -1,8 +1,10 @@
 
 {% extends 'index.html' %}
 {% load static %} {% block content %} 
-<h1>Teams:</h1>
+<div class="team-container">
+    <h1 class="header-teams">Teams:</h1>
 <div class="tablesDiv">
+    
   {% comment %} <h2>{{ div.name }}</h2> {% endcomment %}
   {% for div in divisions %}
   <table class="tables">
@@ -32,6 +34,7 @@
       </tr>
       {% endfor %}
     </tbody>
+</div>
 </div>
 
 {% endfor %} {% endblock %}
