@@ -1,5 +1,5 @@
 body {
-    background-color: #f3f3f3;
+    background-color: #224B88;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -10,4 +10,23 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+#header {
+    background-color: #1F437B;
+    display:flex;
+    justify-content: space-between;
+    height:60px;
+    padding:1%;
+}
+#header>div{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width:12%;
+}
+#header>div>a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:0 1%;
 }
