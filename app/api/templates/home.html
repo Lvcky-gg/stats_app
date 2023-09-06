@@ -47,6 +47,9 @@
 
 <div>
   <h2 class="header-teams">News</h2>
+  {% autoescape off %}
+  {{news| safe}}
+  {% endautoescape %}
 
   </div>
 
