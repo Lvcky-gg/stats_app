@@ -82,14 +82,7 @@ tr:nth-child(even) {
     left: 3.1em;
 
 }
-/* .tables{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin:2% 5%;
+.anchor-team-name{
+    text-decoration: none ;
+    color:black;
 }
-.tables>table{
-    width:45%;
-    border-collapse: collapse;
-    
-} */

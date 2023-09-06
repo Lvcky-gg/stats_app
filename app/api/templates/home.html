@@ -23,7 +23,7 @@
     <tbody>
       {% for team in div.div %}
       <tr>
-        <td>{{ team.team.name }}</td>
+        <td><a href="/teams/{{team.team.id}}" class="anchor-team-name">{{ team.team.name }}</a></td>
         <td>{{ team.leagueRecord.wins }}</td>
         <td>{{ team.leagueRecord.losses}}</td>
         {% comment %} <td>{{ team.leagueRecord.ties }}</td> {% endcomment %}
