@@ -1,7 +1,7 @@
 from django.shortcuts import render
 ####################################MOVE TO UTILS
 import requests
-import json
+from html.parser import HTMLParser
 teams = requests.get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
 Standings = requests.get("https://statsapi.mlb.com/api/v1/standings?leagueId=103,104").json()["records"]
 
@@ -35,6 +35,14 @@ def home(response):
     nlc = []
     alw = []
     nlw = []
+    news = requests.get("https://www.mlb.com/feeds/news/rss.xml").text
+    #create a list
+    # parse for items <item> </item>
+    # once length of list is 5, break
+    # pass this through to the template and map it to the html
+
+
+    print(news)
     for i in range(len(Standings)):
         teamStanding = Standings[i]['teamRecords']
 
@@ -56,7 +64,7 @@ def home(response):
 
        
        
-    return render(response, "home.html", {'divisions':[{"name":"AL East","div":ale},{"name":"NL East","div":nle},{"name":"AL Central","div":alc},{"name":"NL Central","div":nlc},{"name":"AL West","div":alw},{"name":"NL West","div":nlw}]})
+    return render(response, "home.html", {'divisions':[{"name":"AL East","div":ale},{"name":"NL East","div":nle},{"name":"AL Central","div":alc},{"name":"NL Central","div":nlc},{"name":"AL West","div":alw},{"name":"NL West","div":nlw}], "news":news})
 
     # print(alEastStandings.json()["records"][0]["teamRecords"])
     
