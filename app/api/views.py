@@ -42,10 +42,10 @@ def home(response):
     # pass this through to the template and map it to the html
 
 
-    print(news)
+    # print(news)
     for i in range(len(Standings)):
         teamStanding = Standings[i]['teamRecords']
-
+# https://www.mlbstatic.com/team-logos/141.svg
         for k in range(len(teamStanding)):
             team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], "l10Record":teamStanding[k]['records']['splitRecords'][8], "diff":teamStanding[k]['runDifferential'], "gb":teamStanding[k]["gamesBack"]}
             if teamStanding[k]['team']['name'] in alEastNames:

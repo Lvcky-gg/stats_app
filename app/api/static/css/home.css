@@ -95,3 +95,8 @@ tr:nth-child(even) {
     transform: scale(1.1);
     transition: 0.5s;
 }
+.logo-for-team{
+    height:20px;
+    padding-left:2px;
+    padding-right:5px;
+}
