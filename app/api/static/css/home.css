@@ -1,3 +1,6 @@
+
+
+
 body {
     background-color: #224B88;
     font-family: 'Roboto', sans-serif;
@@ -12,6 +15,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6, th {
     color:#F7F7F7;
+    font-family: 'IBM Plex Sans wght@600', sans-serif;
 }
 thead {
     background-color: #1F437B;
@@ -84,8 +88,9 @@ tr:nth-child(even) {
 
 }
 .anchor-team-name{
-    text-decoration: none ;
-    color:black;
+    text-decoration: none;
+    color:#244D87;
+    font-family: 'IBM Plex Sans wght@600', sans-serif;
 }
 .logo>img{
    height:100%;
