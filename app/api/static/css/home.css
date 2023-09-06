@@ -13,6 +13,17 @@ body {
 h1, h2, h3, h4, h5, h6, th {
     color:#F7F7F7;
 }
+th {
+    background-color: #3E9FCA;
+}
+table {
+    background-color:#F7F7F7;
+    width:49%;
+    border-radius: 5px;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
 #header {
     background-color: #1F437B;
     display:flex;
@@ -35,7 +46,7 @@ h1, h2, h3, h4, h5, h6, th {
 .tablesDiv{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin:5%;
     margin-top:4%;
@@ -49,7 +60,7 @@ h1, h2, h3, h4, h5, h6, th {
     position: relative;
     width:fit-content;
     top: 1.6em;
-    left: 2.2em;
+    left: 3.1em;
 
 }
 /* .tables{
