@@ -1,4 +1,5 @@
 from django.shortcuts import render
+####################################MOVE TO UTILS
 import requests
 import json
 teams = requests.get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
@@ -21,7 +22,7 @@ alCentralNames = [i[1] for i in alCentral]
 nlCentralNames = [i[1] for i in nlCentral]
 alWestNames = [i[1] for i in alWest]
 nlWestNames = [i[1] for i in nlWest]
-
+################################################################################
 
 # POLYAS
 # Need a list of each team in a division
@@ -37,10 +38,6 @@ def home(response):
     for i in range(len(Standings)):
         teamStanding = Standings[i]['teamRecords']
 
-      # To calculate GB between the first place and other teams, use the formula (Difference in wins + Difference in losses) / 2
-      # FIND GB AND APPEND IT TO TEAM
-      #   Last 10 must be added to team 5 - 5
-      #  DIFF must be added to team
         for k in range(len(teamStanding)):
             team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], "l10Record":teamStanding[k]['records']['splitRecords'][8], "diff":teamStanding[k]['runDifferential'], "gb":teamStanding[k]["gamesBack"]}
             if teamStanding[k]['team']['name'] in alEastNames:

@@ -35,9 +35,10 @@ h1, h2, h3, h4, h5, h6, th {
 .tablesDiv{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin:5%;
+    margin-top:4%;
     gap: 15px;
 }
 .team-container{
@@ -46,8 +47,9 @@ h1, h2, h3, h4, h5, h6, th {
 }
 .header-teams{
     position: relative;
+    width:fit-content;
     top: 1.6em;
-    left: 2em;
+    left: 2.2em;
 
 }
 /* .tables{
