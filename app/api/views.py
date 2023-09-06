@@ -64,8 +64,19 @@ def parseHTML(val):
         image = xmlItems[i].split('href="' )[1].split('"/>')[0]
         date = xmlItems[i].split('<pubDate>')[1].split('</pubDate>')[0].split(', ')[1].split(' ')
         author = xmlItems[i].split('<dc:creator>' )[1].split('</dc:creator>')[0]
+        month = date[1]
+        day = date[0]
+        year = date[2]
         # print(xmlItems[i])
-        news_list.append({"title":desc, "link":link, "image":image, "date":date, "author":author})
+        news_list.append({"title":desc, 
+                          "link":link, 
+                          "image":image, 
+                          "date":date, 
+                          "author":author, 
+                          "day":day,
+                          "month":month,
+                          "year":year,
+                          })
     return  news_list
 # POLYAS
 # Need a list of each team in a division
@@ -78,4 +89,5 @@ def home(response):
                   {'divisions':divisions, 
                     "news":news})
 
+    
     
