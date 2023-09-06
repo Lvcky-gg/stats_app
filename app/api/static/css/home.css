@@ -3,7 +3,7 @@
 
 body {
     background-color: #224B88;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'IBM Plex Sans wght@600', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -16,6 +16,10 @@ body {
 h1, h2, h3, h4, h5, h6, th {
     color:#F7F7F7;
     font-family: 'IBM Plex Sans wght@600', sans-serif;
+    width:fit-content;
+}
+a {
+    text-decoration: none;
 }
 thead {
     background-color: #1F437B;
@@ -90,7 +94,7 @@ tr:nth-child(even) {
 .anchor-team-name{
     text-decoration: none;
     color:#244D87;
-    font-family: 'IBM Plex Sans wght@600', sans-serif;
+    
 }
 .logo>img{
    height:100%;
@@ -105,8 +109,38 @@ tr:nth-child(even) {
     padding-left:2px;
     padding-right:5px;
 }
-.news-container {
+#news-container-child {
     display: flex;
+    flex-direction: row;
     width: 70%;
     justify-content: space-between;
+    margin:auto;
+    margin-top:5%;
+    gap:15px;
+    margin-bottom: 10%;
+}
+.news{
+    width:25%;
+    background-color: #F7F7F7;
+    border-radius: 2%;
+    padding-bottom: 1%;
+    
+}
+.article-image{
+    width:100%;
+    margin:auto;
+}
+.news-heading {
+    color:#244D87;
+    padding:2%;
+    
+}
+.article-author{
+    color:black;
+    width:fit-content;
+    margin:auto;
+    
+}
+.header-news {
+    left:15%
 }

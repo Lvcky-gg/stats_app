@@ -58,7 +58,7 @@ def parseHTML(val):
     news_list = []
     url = requests.get(val).text
     xmlItems = url.split('<item>')[1::][1::]
-    for i in range(0,5):
+    for i in range(0,4):
         desc = xmlItems[i].split('<title>' )[1].split('</title>')[0].split('<![CDATA[')[1].split(']]>')[0]
         link = xmlItems[i].split('<link>' )[1].split('</link>')[0]
         image = xmlItems[i].split('href="' )[1].split('"/>')[0]

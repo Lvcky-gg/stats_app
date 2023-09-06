@@ -1,4 +1,7 @@
-{% extends 'index.html' %} {% load static %} {% block content %}
+{% extends 'index.html' %}
+ {% load static %} 
+ {% block content %}
+
 <div class="team-container">
   <h2 class="header-teams">Teams</h2>
   <div class="tablesDiv">
@@ -49,15 +52,19 @@
 </div>
 
 <div class="news-container">
-  <h2 class="header-teams">News</h2>
-  <div class="news-container">
+  <h2 class="header-teams header-news">News</h2>
+  <div id="news-container-child">
     {% for article in news %}
     <div class="news">
       <a href="{{article.link}}">
-        <img src="{{article.image}}" alt="article image" />
-        <h3>{{article.title}}</h3>
+        <img
+          class="article-image"
+          src="{{article.image}}"
+          alt="article image"
+        />
+        <h3 class="news-heading">{{article.title}}</h3>
         <p>{{article.description}}</p>
-        <p>
+        <p class="article-author">
           {{article.author}} | {{article.day}} {{article.month}}
           {{article.year}}
         </p>
@@ -65,6 +72,8 @@
     </div>
     {% endfor %}
   </div>
-
-  {% endblock %}
 </div>
+
+  {% endblock %} {% comment %}
+</div>
+{% endcomment %}
