@@ -87,3 +87,11 @@ tr:nth-child(even) {
     text-decoration: none ;
     color:black;
 }
+.logo>img{
+   height:100%;
+   margin-left:5%;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
