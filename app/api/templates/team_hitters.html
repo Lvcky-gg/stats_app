@@ -1,3 +1,18 @@
-{% extends 'index.html' %} {% block content %}
-<h1>Test</h1>
+{% extends 'index.html' %} {% load static %}{% block content %}
+<div id="team-players-container">
+  <div id="team-player-top">
+    <div id="team-players-info">
+      <div>
+        <div id="team-players-img-border">
+          <img
+            id="team-players-logo-team"
+            src="https://www.mlbstatic.com/team-logos/{{id}}.svg"
+            alt="logo"
+          />
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>
 {% endblock %}

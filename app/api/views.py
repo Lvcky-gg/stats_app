@@ -15,4 +15,4 @@ def home(response):
 
     
 def team_hitters(request, id=id):
-    return render(request, "team_hitters.html", {})  
+    return render(request, "team_hitters.html", { "id":id }) 
