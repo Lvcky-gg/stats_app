@@ -10,7 +10,7 @@
   <table class="tables">
     <thead>
       <tr>
-        <th>Team</th>
+        <th>{{div.name}}</th>
         <th>W</th>
         <th>L</th>
         {% comment %} <th>P</th> {% endcomment %}
@@ -34,7 +34,17 @@
       </tr>
       {% endfor %}
     </tbody>
+
+
+
+{% endfor %} 
 </div>
 </div>
 
-{% endfor %} {% endblock %}
+{% comment %} <div>
+    <div>
+        <h2 class="header-teams">News:</h2>
+    </div>
+</div> {% endcomment %}
+
+{% endblock %}

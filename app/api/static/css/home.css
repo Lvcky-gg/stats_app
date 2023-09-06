@@ -15,37 +15,34 @@ h1, h2, h3, h4, h5, h6, th {
 }
 thead {
     background-color: #1F437B;
-    border-radius: 5px 5px 0px 0px;
 }
 th {
     background-color: #3E9FCA;
-    padding:5px;
+
+    
     
 }
-td {
-    padding:5px;
-    width:fit-content;
-    margin:auto;
 
-}
-
-table {
+ table {
     background-color: #3E9FCA;
     width:49%;
-    border-radius: 5px;
-    border-collapse: collapse;
-
+    border-width: 0px;
+    padding:5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-spacing: 0px;
     
-}
+ }
+ td{
+    padding:1%;
+ }
 tr:nth-child(odd) {
     background-color:#F7F7F7;
 }
 tr:nth-child(even) {
     background-color: lightgray;
 }
-tr:nth-last-child() {
-    border-radius: 0px 0px 5px 5px;
-}
+
 #header {
     background-color: #1F437B;
     display:flex;
