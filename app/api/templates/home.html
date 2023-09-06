@@ -27,7 +27,7 @@
         {% for team in div.div %}
         <tr>
           <td>
-            <a href="/teams/{{team.team.id}}" class="anchor-team-name">
+            <a href="/teams/{{team.team.id}}/hitters" class="anchor-team-name">
               <img
                 class="logo-for-team"
                 src="https://www.mlbstatic.com/team-logos/{{team.team.id}}.svg"
@@ -64,11 +64,12 @@
         />
         <h3 class="news-heading">{{article.title}}</h3>
         <p>{{article.description}}</p>
+    </a>
         <p class="article-author">
           {{article.author}} | {{article.day}} {{article.month}}
           {{article.year}}
         </p>
-      </a>
+      
     </div>
     {% endfor %}
   </div>

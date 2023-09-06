@@ -115,16 +115,19 @@ tr:nth-child(even) {
     flex-direction: row;
     width: 70%;
     justify-content: space-between;
+  
     margin:auto;
     margin-top:5%;
     gap:15px;
     margin-bottom: 10%;
+    
 }
 .news{
     width:24%;
     background-color: #F7F7F7;
     border-radius: 2%;
     padding-bottom: 1%;
+  
     
 }
 .article-image{
@@ -134,12 +137,15 @@ tr:nth-child(even) {
 .news-heading {
     color:#244D87;
     padding:2%;
+    font-weight: 600;
+    max-height:20%;
     
 }
 .article-author{
     color:black;
     width:fit-content;
     margin:auto;
+    height:20px;
     
 }
 .header-news {

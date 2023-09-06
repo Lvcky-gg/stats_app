@@ -14,4 +14,5 @@ def home(response):
                     "news":news})
 
     
-    
+def team_hitters(request, id=id):
+    return render(request, "team_hitters.html", {})  
