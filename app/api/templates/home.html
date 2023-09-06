@@ -1,50 +1,52 @@
-
-{% extends 'index.html' %}
-{% load static %} {% block content %} 
+{% extends 'index.html' %} {% load static %} {% block content %}
 <div class="team-container">
-    <h2 class="header-teams">Teams:</h2>
-<div class="tablesDiv">
-    
-  {% comment %} <h2>{{ div.name }}</h2> {% endcomment %}
-  {% for div in divisions %}
-  <table class="tables">
-    <thead>
-      <tr>
-        <th>{{div.name}}</th>
-        <th>W</th>
-        <th>L</th>
-        {% comment %} <th>P</th> {% endcomment %}
-        <th>Pct</th>
-        <th>GB</th>
-        <th>L10</th>
-        <th>DIFF</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for team in div.div %}
-      <tr>
-        <td><a href="/teams/{{team.team.id}}" class="anchor-team-name">{{ team.team.name }}</a></td>
-        <td>{{ team.leagueRecord.wins }}</td>
-        <td>{{ team.leagueRecord.losses}}</td>
-        {% comment %} <td>{{ team.leagueRecord.ties }}</td> {% endcomment %}
-        <td>{{ team.leagueRecord.pct }}</td>
-        <td>{{ team.gb }}</td>
-        <td> {{team.l10Record.wins}}-{{team.l10Record.losses}}</td>
-        <td>{{ team.diff }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-
-
-
-{% endfor %} 
+  <h2 class="header-teams">Teams:</h2>
+  <div class="tablesDiv">
+    {% comment %}
+    <h2>{{ div.name }}</h2>
+    {% endcomment %} {% for div in divisions %}
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>{{div.name}}</th>
+          <th>W</th>
+          <th>L</th>
+          {% comment %}
+          <th>P</th>
+          {% endcomment %}
+          <th>Pct</th>
+          <th>GB</th>
+          <th>L10</th>
+          <th>DIFF</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in div.div %}
+        <tr>
+          <td>
+            <a href="/teams/{{team.team.id}}" class="anchor-team-name"
+              >{{ team.team.name }}</a
+            >
+          </td>
+          <td>{{ team.leagueRecord.wins }}</td>
+          <td>{{ team.leagueRecord.losses}}</td>
+          {% comment %}
+          <td>{{ team.leagueRecord.ties }}</td>
+          {% endcomment %}
+          <td>{{ team.leagueRecord.pct }}</td>
+          <td>{{ team.gb }}</td>
+          <td>{{team.l10Record.wins}}-{{team.l10Record.losses}}</td>
+          <td>{{ team.diff }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  </div>
 </div>
-</div>
 
-{% comment %} <div>
-    <div>
-        <h2 class="header-teams">News:</h2>
-    </div>
-</div> {% endcomment %}
+<div>
+  <h2 class="header-teams">News:</h2>
+</div>
 
 {% endblock %}
