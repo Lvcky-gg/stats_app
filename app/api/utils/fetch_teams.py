@@ -5,8 +5,7 @@ def create_teams():
     teams = requests.get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
     Standings = requests.get("https://statsapi.mlb.com/api/v1/standings?leagueId=103,104").json()["records"]
 
-    # print(teams.json()["teams"][0]["division"])
-    alEast = [[i["id"], i["name"], i["link"], i["league"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League East"]
+    alEast = [[i["id"] ,i["name"], i["link"],i['abbreviation'], i["league"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League East"]
     nlEast = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "National League East"]
     alCentral = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League Central"]
     nlCentral = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "National League Central"]
@@ -28,7 +27,13 @@ def create_teams():
         teamStanding = Standings[i]['teamRecords']
 # https://www.mlbstatic.com/team-logos/141.svg
         for k in range(len(teamStanding)):
-            team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], "l10Record":teamStanding[k]['records']['splitRecords'][8], "diff":teamStanding[k]['runDifferential'], "gb":teamStanding[k]["gamesBack"]}
+            team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], 
+                    "l10Record":teamStanding[k]['records']['splitRecords'][8], 
+                    "diff":teamStanding[k]['runDifferential'], 
+                    "gb":teamStanding[k]["gamesBack"],
+                    "leagueRank":teamStanding[k]["leagueRank"],
+                    "divisionRank":teamStanding[k]["divisionRank"],
+                    }
             if teamStanding[k]['team']['name'] in alEastNames:
                 ale.append(team)
             elif teamStanding[k]['team']['name'] in nlEastNames:
