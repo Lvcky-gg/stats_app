@@ -5,7 +5,7 @@ def create_teams():
     teams = requests.get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
     Standings = requests.get("https://statsapi.mlb.com/api/v1/standings?leagueId=103,104").json()["records"]
 
-    alEast = [[i["id"] ,i["name"], i["link"],i['abbreviation'], i["league"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League East"]
+    alEast = [[i["id"] ,i["name"], i["link"], i["league"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League East"]
     nlEast = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "National League East"]
     alCentral = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "American League Central"]
     nlCentral = [[i["id"], i["name"], i["link"]] for i in teams.json()["teams"] if i["division"]["name"] == "National League Central"]
@@ -33,6 +33,7 @@ def create_teams():
                     "gb":teamStanding[k]["gamesBack"],
                     "leagueRank":teamStanding[k]["leagueRank"],
                     "divisionRank":teamStanding[k]["divisionRank"],
+                    
                     }
             if teamStanding[k]['team']['name'] in alEastNames:
                 ale.append(team)

@@ -28,14 +28,14 @@
   </div>
 
   <div>
-    <table class="tables">
+    <table class="tablesTwo">
       <thead>
         <th>Pos</th>
         <th>#</th>
         <th>Player</th>
-        {% comment %}
+
         <th>Age</th>
-        {% endcomment %} {% comment %}
+
         <th>B</th>
         <th>T</th>
         <th>PA</th>
@@ -49,7 +49,6 @@
         <th>AVG</th>
         <th>OBP</th>
         <th>OPS</th>
-        {% endcomment %}
       </thead>
       <tbody>
         {% for player in players %}
@@ -57,19 +56,19 @@
           <td>{{player.position.abbreviation}}</td>
           <td>{{player.jerseyNumber}}</td>
           <td>
-            <a href="" class="player-link">
+            <a href="/players/{{id}}" class="player-link">
               <img
                 src="https://content.mlb.com/images/headshots/current/60x60/{{player.person.id}}.png"
               />
               {{player.person.fullName}}</a
             >
           </td>
-          {% comment %}
+
           <td>{{player.person.currentAge}}</td>
-          {% endcomment %} {% comment %}
+
           <td>{{player.person.batSide.code}}</td>
           <td>{{player.person.pitchHand.code}}</td>
-          <td>{{player.stats.batting.atBats}}</td>
+          <td>{{player.batting.atBats}}</td>
           <td>{{player.stats.batting.hits}}</td>
           <td>{{player.stats.batting.doubles}}</td>
           <td>{{player.stats.batting.triples}}</td>
@@ -80,7 +79,6 @@
           <td>{{player.stats.batting.avg}}</td>
           <td>{{player.stats.batting.obp}}</td>
           <td>{{player.stats.batting.ops}}</td>
-          {% endcomment %}
         </tr>
         {% endfor %}
       </tbody>

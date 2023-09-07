@@ -80,6 +80,10 @@ tr:nth-child(even) {
     margin-bottom:5%;
     gap: 15px;
 }
+.tablesTwo{
+    margin:auto;
+    width:100%;
+}
 .team-container{
     width:80%;
     margin:auto;
@@ -164,7 +168,7 @@ tr:nth-child(even) {
     margin-top:4%;
 }
 #team-players-info{
-    width:30%;
+    width:35%;
     display:flex;
     justify-content: space-between;
     flex-direction:row;
@@ -176,7 +180,7 @@ tr:nth-child(even) {
     flex-direction:row;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 50%;
     background-color: #F7F7F7;
 
 }
@@ -186,8 +190,8 @@ tr:nth-child(even) {
     align-items: center;
     border-radius: 50%;
     background-color: #F7F7F7;
-    width: 100px;
-    height:100px;
+    width: 120px;
+    height:120px;
     margin:auto;
     margin-top:5%;
     margin-bottom:5%;
