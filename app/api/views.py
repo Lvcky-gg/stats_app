@@ -3,6 +3,7 @@ import requests
 
 from .utils.fetch_teams import create_teams
 from .utils.fetch_news import parseHTML
+from .utils.team_details import team_details
 
 
 
@@ -16,13 +17,10 @@ def home(response):
 
     
 def team_hitters(request, id=id):
-    team = requests.get(f"https://statsapi.mlb.com/api/v1/teams/{id}").json()
-    listTeam= team["teams"][0]
-    division = listTeam["division"]["name"]
-    teamstats = {}
-    print(division)
-    create_teams()
-    # for i in range(create_teams()):
-    #     print(i)
-    # print(division)
-    return render(request, "team_hitters.html", { "id":id }) 
+    teamdetails = team_details(id)
+    players = requests.get(f"https://statsapi.mlb.com/api/v1/teams/{id}/roster").json()["roster"]
+    
+    
+        
+    
+    return render(request, "team_hitters.html", { "id":id, "team":teamdetails, "players":players }) 

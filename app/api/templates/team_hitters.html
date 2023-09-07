@@ -11,8 +11,80 @@
           />
         </div>
       </div>
-      <div></div>
+      <div id="team-header">
+        <h1>{{team.team.name}}</h1>
+        <div id="team-player-team-stats">
+          <p id="team-player-team-rank">
+            {{team.divisionRank}} in {{team.division}}
+          </p>
+          <p id="team-header-p">
+            {{team.leagueRecord.wins}} -
+            {{team.leagueRecord.losses}}({{team.leagueRecord.pct}}) | GB
+            {{team.gamesBack}}
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div>
+    <table class="tables">
+      <thead>
+        <th>Pos</th>
+        <th>#</th>
+        <th>Player</th>
+        {% comment %}
+        <th>Age</th>
+        {% endcomment %} {% comment %}
+        <th>B</th>
+        <th>T</th>
+        <th>PA</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>SB</th>
+        <th>SO%</th>
+        <th>BB%</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>OPS</th>
+        {% endcomment %}
+      </thead>
+      <tbody>
+        {% for player in players %}
+        <tr>
+          <td>{{player.position.abbreviation}}</td>
+          <td>{{player.jerseyNumber}}</td>
+          <td>
+            <a href="" class="player-link">
+              <img
+                src="https://content.mlb.com/images/headshots/current/60x60/{{player.person.id}}.png"
+              />
+              {{player.person.fullName}}</a
+            >
+          </td>
+          {% comment %}
+          <td>{{player.person.currentAge}}</td>
+          {% endcomment %} {% comment %}
+          <td>{{player.person.batSide.code}}</td>
+          <td>{{player.person.pitchHand.code}}</td>
+          <td>{{player.stats.batting.atBats}}</td>
+          <td>{{player.stats.batting.hits}}</td>
+          <td>{{player.stats.batting.doubles}}</td>
+          <td>{{player.stats.batting.triples}}</td>
+          <td>{{player.stats.batting.homeRuns}}</td>
+          <td>{{player.stats.batting.stolenBases}}</td>
+          <td>{{player.stats.batting.strikeOuts}}</td>
+          <td>{{player.stats.batting.baseOnBalls}}</td>
+          <td>{{player.stats.batting.avg}}</td>
+          <td>{{player.stats.batting.obp}}</td>
+          <td>{{player.stats.batting.ops}}</td>
+          {% endcomment %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
 {% endblock %}
