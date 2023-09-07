@@ -44,8 +44,7 @@
         <th>3B</th>
         <th>HR</th>
         <th>SB</th>
-        <th>SO%</th>
-        <th>BB%</th>
+
         <th>AVG</th>
         <th>OBP</th>
         <th>OPS</th>
@@ -53,32 +52,30 @@
       <tbody>
         {% for player in players %}
         <tr>
-          <td>{{player.position.abbreviation}}</td>
+          <td>{{player.position}}</td>
           <td>{{player.jerseyNumber}}</td>
           <td>
             <a href="/players/{{id}}" class="player-link">
               <img
-                src="https://content.mlb.com/images/headshots/current/60x60/{{player.person.id}}.png"
+                src="https://content.mlb.com/images/headshots/current/60x60/{{player.id}}.png"
               />
-              {{player.person.fullName}}</a
+              {{player.fullname}}</a
             >
           </td>
 
-          <td>{{player.person.currentAge}}</td>
+          <td>{{player.age}}</td>
 
-          <td>{{player.person.batSide.code}}</td>
-          <td>{{player.person.pitchHand.code}}</td>
-          <td>{{player.batting.atBats}}</td>
-          <td>{{player.stats.batting.hits}}</td>
-          <td>{{player.stats.batting.doubles}}</td>
-          <td>{{player.stats.batting.triples}}</td>
-          <td>{{player.stats.batting.homeRuns}}</td>
-          <td>{{player.stats.batting.stolenBases}}</td>
-          <td>{{player.stats.batting.strikeOuts}}</td>
-          <td>{{player.stats.batting.baseOnBalls}}</td>
-          <td>{{player.stats.batting.avg}}</td>
-          <td>{{player.stats.batting.obp}}</td>
-          <td>{{player.stats.batting.ops}}</td>
+          <td>{{player.b}}</td>
+          <td>{{player.t}}</td>
+          <td>{{player.pa}}</td>
+          <td>{{player.h}}</td>
+          <td>{{player.2b}}</td>
+          <td>{{player.3b}}</td>
+          <td>{{player.hr}}</td>
+          <td>{{player.sb}}</td>
+          <td>{{player.avg}}</td>
+          <td>{{player.obp}}</td>
+          <td>{{player.ops}}</td>
         </tr>
         {% endfor %}
       </tbody>
