@@ -17,11 +17,16 @@ h1, h2, h3, h4, h5, h6, th {
     color:#F7F7F7;
     font-family: 'IBM Plex Sans wght@600', sans-serif;
     width:fit-content;
+    line-height: -1;
 }
 a {
     text-decoration: none;
     color: #244D87;
     font-weight: 600;
+    line-height: -1;
+}
+p{
+    line-height: -1;
 }
 thead {
     background-color: #1F437B;
