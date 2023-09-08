@@ -22,3 +22,7 @@ def team_hitters(request, id=id):
     teamdetails = team_details(id)
     players = get_hitters(id) 
     return render(request, "team_hitters.html", { "id":id, "team":teamdetails, "players":players }) 
+
+def team_pitchers(request, id=id):
+    teamdetails = team_details(id)
+    return render(request, "team_pitchers.html", { "id":id, "team":teamdetails, })

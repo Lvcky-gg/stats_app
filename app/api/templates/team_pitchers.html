@@ -1,3 +1,105 @@
-{% extends 'index.html' %} {% block content %}
-<h1>Test</h1>
+{% extends 'index.html' %} {% load static %}{% block content %}
+
+<div id="team-players-container">
+  <div id="team-player-top">
+    <div id="team-players-info">
+      <div>
+        <div id="team-players-img-border">
+          <img
+            id="team-players-logo-team"
+            src="https://www.mlbstatic.com/team-logos/{{id}}.svg"
+            alt="logo"
+          />
+        </div>
+      </div>
+      <div id="team-header">
+        <h1>{{team.team.name}}</h1>
+        <div id="team-player-team-stats">
+          <p id="team-player-team-rank">
+            {{team.divisionRank}} in {{team.division}}
+          </p>
+          <p id="team-header-p">
+            {{team.leagueRecord.wins}} -
+            {{team.leagueRecord.losses}}({{team.leagueRecord.pct}}) | GB
+            {{team.gamesBack}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <div class="btn-groupLholder">
+            <a href="/teams/{{id}}/hitters" class="btn btn-primary">Hitters</a>
+        </div>
+        <div class="btn-groupDholder">
+            <a href="/teams/{{id}}/pitchers" class="btn btn-primary">Pitchers</a>
+        </div>
+</div>
+
+</div>
+  {% comment %} </div>
+
+  
+  <div class="btn-group" role="group" aria-label="Basic example"></div>
+  <a href="/teams/{{id}}/hitters" class="btn btn-primary">Hitters</a>
+  <a href="/teams/{{id}}/pitchers" class="btn btn-primary">Pitchers</a>
+  </div>  {% endcomment %}
+
+
+  <div>
+    <table class="tablesTwo">
+      <thead>
+        <th>Pos</th>
+        <th>#</th>
+        <th>Player</th>
+
+        <th>Age</th>
+
+        <th>B</th>
+        <th>T</th>
+        <th>PA</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>SB</th>
+
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>OPS</th>
+      </thead>
+      <tbody>
+        {% for player in players %}
+        <tr>
+          <td>{{player.position}}</td>
+          <td>{{player.jerseyNumber}}</td>
+          <td>
+            <a href="/players/{{id}}" class="player-link">
+              <img
+                src="https://content.mlb.com/images/headshots/current/60x60/{{player.id}}.png"
+              />
+              {{player.fullname}}</a
+            >
+          </td>
+
+          <td>{{player.age}}</td>
+
+          <td>{{player.b}}</td>
+          <td>{{player.t}}</td>
+          <td>{{player.pa}}</td>
+          <td>{{player.h}}</td>
+          <td>{{player.2b}}</td>
+          <td>{{player.3b}}</td>
+          <td>{{player.hr}}</td>
+          <td>{{player.sb}}</td>
+          <td>{{player.avg}}</td>
+          <td>{{player.obp}}</td>
+          <td>{{player.ops}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+
+{% comment %} </div> {% endcomment %}
 {% endblock %}

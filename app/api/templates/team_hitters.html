@@ -27,19 +27,14 @@
       </div>
     </div>
     <div class="btn-group" role="group" aria-label="Basic example">
-    <a href="/teams/{{id}}/hitters" class="btn btn-primary">Hitters</a>
-    <a href="/teams/{{id}}/pitchers" class="btn btn-primary">Pitchers</a>
-</div>
-
-</div>
-  {% comment %} </div>
-
-  
-  <div class="btn-group" role="group" aria-label="Basic example"></div>
-  <a href="/teams/{{id}}/hitters" class="btn btn-primary">Hitters</a>
-  <a href="/teams/{{id}}/pitchers" class="btn btn-primary">Pitchers</a>
-  </div>  {% endcomment %}
-
+      <div class="btn-groupPholder">
+        <a href="/teams/{{id}}/hitters" class="btn btn-primary">Hitters</a>
+      </div>
+      <div class="btn-groupHholder">
+        <a href="/teams/{{id}}/pitchers" class="btn btn-primary">Pitchers</a>
+      </div>
+    </div>
+  </div>
 
   <div>
     <table class="tablesTwo">
@@ -94,8 +89,8 @@
         {% endfor %}
       </tbody>
     </table>
-
   </div>
 
-{% comment %} </div> {% endcomment %}
-{% endblock %}
+  {% comment %}
+</div>
+{% endcomment %} {% endblock %}
