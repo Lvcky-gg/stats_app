@@ -7,8 +7,101 @@
         src="https://content.mlb.com/images/headshots/current/60x60/{{id}}@2x.png"
         alt="logo"
       />
+      <div id="player-header">
+        <h1>{{player.fullName}}</h1>
+        <div id="team-player-team-stats">
+          <p id="player-header-p">{{player.primaryPosition.abbreviation}}</p>
+          <p id="team-player-team-rank">{{season.team.name}}</p>
+        </div>
+      </div>
+      <div id="player-page-stats">
+        <div>
+          <p class="player-top">B/T</p>
+          <p class="player-bot">
+            {{player.batSide.code}}/{{player.pitchHand.code}}
+          </p>
+        </div>
+
+        <div>
+          <p class="player-top">Age</p>
+          <p class="player-bot">{{player.currentAge}}</p>
+        </div>
+        <div>
+          <p class="player-top">H</p>
+          <p class="player-bot">{{player.height}}</p>
+        </div>
+        <div>
+          <p class="player-top">W</p>
+          <p class="player-bot">{{player.weight}}</p>
+        </div>
+        <div>
+          <p class="player-top">Drafted</p>
+          <p class="player-bot">{{player.draftYear}}</p>
+        </div>
+      </div>
     </div>
-    <div></div>
+  </div>
+
+  <div>
+    <table class="tablesTwo">
+      <thead>
+        <th>Year</th>
+        <th>Team</th>
+        <th>G</th>
+        <th>IP</th>
+        <th>RF</th>
+        <th>PO</th>
+
+        <th>DP</th>
+        <th>TP</th>
+        {% comment %}
+        <th>L</th>
+        <th>SV</th>
+        <th>ERA</th>
+        <th>WHIP</th>
+        <th>H</th>
+        <th>R</th>
+        {% endcomment %}
+        <th>SO</th>
+        <th>BB</th>
+        <th>RF/9</th>
+        <th>OPS</th>
+      </thead>
+
+      <tbody>
+        {% for stat in stats %}
+        <tr>
+          <td>{{stat.season}}</td>
+          <td>
+            <img
+              class="team-logo-player"
+              src="https://www.mlbstatic.com/team-logos/{{stat.team.id}}.svg"
+            />
+            {{stat.team.name}}
+          </td>
+          <td>{{stat.stat.gamesPlayed}}</td>
+          <td>{{stat.stat.innings}}</td>
+
+          <td>{{stat.stat.rangeFactorPerGame}}</td>
+
+          <td>{{stat.stat.putOuts}}</td>
+
+          <td>{{stat.stat.doublePlays}}</td>
+          <td>{{stat.stat.triplePlays}}</td>
+          <td>{{stat.stat.era}}</td>
+          {% comment %}
+          <td>{{stat.stat.whip}}</td>
+          <td>{{stat.stat.hits}}</td>
+          <td>{{stat.stat.runs}}</td>
+          {% endcomment %}
+          <td>{{stat.stat.strikeOuts}}</td>
+          <td>{{stat.stat.baseOnBalls}}</td>
+          <td>{{stat.stat.rangeFactorPer9Inn}}</td>
+          <td>{{stat.stat.ops}}</td>
+        </tr>
+        {% endfor%}
+      </tbody>
+    </table>
   </div>
 </div>
 {% endblock %}

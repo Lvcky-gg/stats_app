@@ -29,10 +29,17 @@ def team_pitchers(request, id=id):
     return render(request, "team_pitchers.html", { "id":id, "team":teamdetails,"players":players })
 
 def player(request, id=id):
-    player = requests.get("https://statsapi.mlb.com/api/v1/people/543807?hydrate=stats(group=[hitting,pitching,fielding],type=[yearByYear])")
+    player = requests.get(f"https://statsapi.mlb.com/api/v1/people/{id}?hydrate=stats(group=[hitting,pitching,fielding],type=[yearByYear])")
     player_about = player.json()["people"][0]
-    
+
     stats = player.json()["people"][0]['stats'][0]['splits']
     current_season = stats[-1]
-    print(stats[-1])
     return render(request, "player_hitters.html", { "id":id, "player":player_about, "stats":stats, "season":current_season })
+
+def player_pitcher(request, id=id):
+    player = requests.get(f"https://statsapi.mlb.com/api/v1/people/{id}?hydrate=stats(group=[hitting,pitching,fielding],type=[yearByYear])")
+    player_about = player.json()["people"][0]
+
+    stats = player.json()["people"][0]['stats'][0]['splits']
+    current_season = stats[-1]
+    return render(request, "player_pitchers.html", { "id":id, "player":player_about, "stats":stats, "season":current_season })

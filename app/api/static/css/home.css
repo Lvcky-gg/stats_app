@@ -138,6 +138,7 @@ tr:nth-child(even) {
     background-color: #F7F7F7;
     border-radius: 2%;
     padding-bottom: 1%;
+    overflow:hidden;
   
     
 }
