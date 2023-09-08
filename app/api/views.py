@@ -5,6 +5,7 @@ from .utils.fetch_teams import create_teams
 from .utils.fetch_news import parseHTML
 from .utils.team_details import team_details
 from .utils.get_hitters import get_hitters
+from .utils.get_pitchers import get_pitchers
 
 
 
@@ -25,4 +26,5 @@ def team_hitters(request, id=id):
 
 def team_pitchers(request, id=id):
     teamdetails = team_details(id)
-    return render(request, "team_pitchers.html", { "id":id, "team":teamdetails, })
+    players = get_pitchers(id)
+    return render(request, "team_pitchers.html", { "id":id, "team":teamdetails,"players":players })
