@@ -216,3 +216,7 @@ tr:nth-child(even) {
 #team-header-p{
     color:#F7F7F7;
 }
+.btn-group {
+    position:relative;
+    left:70%;
+}
