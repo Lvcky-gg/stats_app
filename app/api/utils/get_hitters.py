@@ -6,7 +6,7 @@ def get_hitters(id):
     val = requests.get(f"https://statsapi.mlb.com/api/v1/teams/{id}/roster/Active?hydrate=person(stats(type=season))").json()["roster"]
     for i in range(len(val)):
         
-        if val[i]["position"]["abbreviation"] != "P" and val[i]["position"]["abbreviation"] != "C":
+        if val[i]["position"]["abbreviation"] != "P":
             
             value = {
                 "id":val[i]["person"]["id"],

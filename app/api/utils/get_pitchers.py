@@ -56,6 +56,6 @@ def get_pitchers(id):
                 "OPS":ops,
             }
     
-            print(val[6]["person"])
+
             players.append(value)
     return players
