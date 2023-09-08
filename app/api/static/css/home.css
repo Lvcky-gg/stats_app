@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6, th {
 }
 a {
     text-decoration: none;
+    color: #244D87;
+    font-weight: 600;
 }
 thead {
     background-color: #1F437B;
