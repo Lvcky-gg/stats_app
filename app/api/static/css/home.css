@@ -60,9 +60,13 @@ tr:nth-child(even) {
 #header {
     background-color: #1F437B;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height:60px;
     padding:1%;
+}
+#header>a{
+    margin-right:20%;
+
 }
 #header>div{
     display:flex;
