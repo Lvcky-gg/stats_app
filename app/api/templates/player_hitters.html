@@ -14,7 +14,31 @@
           <p id="team-player-team-rank">{{season.team.name}}</p>
         </div>
       </div>
-      <div>Hello</div>
+      <div id="player-page-stats">
+        <div>
+          <p class="player-top">B/T</p>
+          <p class="player-bot">
+            {{player.batSide.code}}/{{player.pitchHand.code}}
+          </p>
+        </div>
+
+        <div>
+          <p class="player-top">Age</p>
+          <p class="player-bot">{{player.currentAge}}</p>
+        </div>
+        <div>
+          <p class="player-top">H</p>
+          <p class="player-bot">{{player.height}}</p>
+        </div>
+        <div>
+          <p class="player-top">W</p>
+          <p class="player-bot">{{player.weight}}</p>
+        </div>
+        <div>
+          <p class="player-top">Drafted</p>
+          <p class="player-bot">{{player.draftYear}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

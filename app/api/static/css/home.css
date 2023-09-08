@@ -326,3 +326,23 @@ tr:nth-child(even) {
     color:#f7f7f7;
     margin-left:7%;
 }
+
+#player-page-stats{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    width:80%;
+}
+#player-page-stats>div{
+    width:10%;
+    height:10%;
+
+}
+
+.player-bot {
+    color:#f7f7f7
+}
+.player-top{
+    color:#3E9FCA;
+}
