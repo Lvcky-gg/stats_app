@@ -4,7 +4,7 @@ import requests
 def get_pitchers(id):
     players = []
     val = requests.get(f"https://statsapi.mlb.com/api/v1/teams/{id}/roster/Active?hydrate=person(stats(type=season))").json()["roster"]
-    print(val)
+    
     for i in range(len(val)):
         stats = {}
         era = 0.00

@@ -12,7 +12,7 @@ def parseHTML(val):
         month = date[1]
         day = date[0]
         year = date[2]
-        # print(xmlItems[i])
+
         news_list.append({"title":desc, 
                           "link":link, 
                           "image":image, 

@@ -39,32 +39,32 @@
   <div>
     <table class="tablesTwo">
       <thead>
-        <th>Pos</th>
-        <th>#</th>
+        <th><span>Pos</th>
+        <th><span>#</th>
         <th>Player</th>
 
-        <th>Age</th>
+        <th><span>Age</th>
 
-        <th>B</th>
-        <th>T</th>
+        <th><span>B</th>
+        <th><span>T</th>
         {% comment %}
         <th>PA</th>
         {% endcomment %}
-        <th>H</th>
-        <th>2B</th>
-        <th>3B</th>
-        <th>HR</th>
-        <th>SB</th>
+        <th><span>H</th>
+        <th><span>2B</th>
+        <th><span>3B</th>
+        <th><span>HR</th>
+        <th><span>SB</th>
 
-        <th>AVG</th>
-        <th>OBP</th>
-        <th>OPS</th>
+        <th><span>AVG</th>
+        <th><span>OBP</th>
+        <th><span>OPS</th>
       </thead>
       <tbody>
         {% for player in players %}
         <tr>
-          <td>{{player.position}}</td>
-          <td>{{player.jerseyNumber}}</td>
+          <td><span>{{player.position}}</span></td>
+          <td><span>{{player.jerseyNumber}}</span></td>
           <td>
             <a href="/players/{{player.id}}" class="player-link">
               <img
@@ -74,21 +74,21 @@
             >
           </td>
 
-          <td>{{player.age}}</td>
+          <td><span>{{player.age}}</span></td>
 
-          <td>{{player.b}}</td>
-          <td>{{player.t}}</td>
+          <td><span>{{player.b}}</span></td>
+          <td><span>{{player.t}}</span></td>
           {% comment %}
           <td>{{player.pa}}</td>
           {% endcomment %}
-          <td>{{player.h}}</td>
-          <td>{{player.2b}}</td>
-          <td>{{player.3b}}</td>
-          <td>{{player.hr}}</td>
-          <td>{{player.sb}}</td>
-          <td>{{player.avg}}</td>
-          <td>{{player.obp}}</td>
-          <td>{{player.ops}}</td>
+          <td><span>{{player.h}}</span></td>
+          <td><span>{{player.2b}}</span></td>
+          <td><span>{{player.3b}}</span></td>
+          <td><span>{{player.hr}}</span></td>
+          <td><span>{{player.sb}}</span></td>
+          <td><span>{{player.avg}}</span></td>
+          <td><span>{{player.obp}}</span></td>
+          <td><span>{{player.ops}}</span></td>
         </tr>
         {% endfor %}
       </tbody>

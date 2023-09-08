@@ -13,7 +13,6 @@ from .utils.get_pitchers import get_pitchers
 def home(response):
     news = parseHTML("https://www.mlb.com/feeds/news/rss.xml")
     divisions = create_teams() 
-    print(divisions[0]["div"][0])
     return render(response, "home.html", 
                   {'divisions':divisions, 
                     "news":news})

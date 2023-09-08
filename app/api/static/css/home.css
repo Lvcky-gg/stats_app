@@ -43,7 +43,11 @@ th {
  }
  td{
     padding:1%;
+    
  }
+span {
+    margin:auto;
+}
 tr:nth-child(odd) {
     background-color:#F7F7F7;
 }

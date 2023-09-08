@@ -48,26 +48,26 @@
   <div>
     <table class="tablesTwo">
       <thead>
-        <th>Pos</th>
-        <th>#</th>
+        <th><span>Pos</span></th>
+        <th><span>#</span></th>
         <th>Pitcher</th>
 
-        <th>Age</th>
+        <th><span>Age</span></th>
 
-        <th>B</th>
-        <th>T</th>
-        <th>IP</th>
-        <th>ERA</th>
-        <th>SO</th>
-        <th>BB</th>
-        <th>HR/9</th>
-        <th>OPS</th>
+        <th><span>B</span></th>
+        <th><span>T</span></th>
+        <th><span>IP</span></th>
+        <th><span>ERA</span></th>
+        <th><span>SO</span></th>
+        <th><span>BB</span></th>
+        <th><span>HR/9</span></th>
+        <th><span>OPS</span></th>
       </thead>
       <tbody>
         {% for player in players %}
         <tr>
-          <td>{{player.position}}</td>
-          <td>{{player.jerseyNumber}}</td>
+          <td><span>{{player.position}}</span></td>
+          <td><span>{{player.jerseyNumber}}</span></td>
           <td>
             <a href="/players/{{player.id}}" class="player-link">
               <img
@@ -77,15 +77,15 @@
             >
           </td>
 
-          <td>{{player.age}}</td>
-          <td>{{player.b}}</td>
-          <td>{{player.t}}</td>
-          <td>{{player.IP}}</td>
-          <td>{{player.ERA}}</td>
-          <td>{{player.SO}}</td>
-          <td>{{player.BB}}</td>
-          <td>{{player.HR9}}</td>
-          <td>{{player.OPS}}</td>
+          <td><span>{{player.age}}</span></td>
+          <td><span>{{player.b}}</span></td>
+          <td><span>{{player.t}}</span></td>
+          <td><span>{{player.IP}}</span></td>
+          <td><span>{{player.ERA}}</span></td>
+          <td><span>{{player.SO}}</span></td>
+          <td><span>{{player.BB}}</span></td>
+          <td><span>{{player.HR9}}</span></td>
+          <td><span>{{player.OPS}}</span></td>
 
         </tr>
         {% endfor %}

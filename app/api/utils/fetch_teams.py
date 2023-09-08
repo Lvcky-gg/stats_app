@@ -25,7 +25,7 @@ def create_teams():
     nlw = []
     for i in range(len(Standings)):
         teamStanding = Standings[i]['teamRecords']
-# https://www.mlbstatic.com/team-logos/141.svg
+
         for k in range(len(teamStanding)):
             team = {"team":teamStanding[k]['team'],"leagueRecord":teamStanding[k]['leagueRecord'], 
                     "l10Record":teamStanding[k]['records']['splitRecords'][8], 
