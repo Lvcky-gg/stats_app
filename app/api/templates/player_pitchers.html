@@ -54,16 +54,7 @@
 
         <th>DP</th>
         <th>TP</th>
-        {% comment %}
-        <th>L</th>
-        <th>SV</th>
-        <th>ERA</th>
-        <th>WHIP</th>
-        <th>H</th>
-        <th>R</th>
-        {% endcomment %}
-        <th>SO</th>
-        <th>BB</th>
+
         <th>RF/9</th>
         <th>OPS</th>
       </thead>
@@ -89,13 +80,6 @@
           <td>{{stat.stat.doublePlays}}</td>
           <td>{{stat.stat.triplePlays}}</td>
           <td>{{stat.stat.era}}</td>
-          {% comment %}
-          <td>{{stat.stat.whip}}</td>
-          <td>{{stat.stat.hits}}</td>
-          <td>{{stat.stat.runs}}</td>
-          {% endcomment %}
-          <td>{{stat.stat.strikeOuts}}</td>
-          <td>{{stat.stat.baseOnBalls}}</td>
           <td>{{stat.stat.rangeFactorPer9Inn}}</td>
           <td>{{stat.stat.ops}}</td>
         </tr>
