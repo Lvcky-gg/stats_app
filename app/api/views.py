@@ -43,3 +43,12 @@ def player_pitcher(request, id=id):
     stats = player.json()["people"][0]['stats'][0]['splits']
     current_season = stats[-1]
     return render(request, "player_pitchers.html", { "id":id, "player":player_about, "stats":stats, "season":current_season })
+
+def leaderboard(request):
+    HR_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=homeRuns").json()["leagueLeaders"]
+    OPS_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=ops").json()["leagueLeaders"]
+    ERA_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=earnedRunAverage").json()["leagueLeaders"]
+    IP_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=inningsPitched").json()["leagueLeaders"]
+    S_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=strikeOuts").json()["leagueLeaders"]
+    print(ERA_leader)
+    return render(request, "leaderboard.html", {})
