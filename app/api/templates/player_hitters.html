@@ -41,5 +41,57 @@
       </div>
     </div>
   </div>
+
+  <div>
+    <table class="tablesTwo">
+      <thead>
+        <th>Year</th>
+        <th>Team</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>R</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>SB</th>
+        <th>BB</th>
+        <th>SO</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </thead>
+
+      <tbody>
+        {% for stat in stats %}
+        <tr>
+          <td>{{stat.season}}</td>
+          <td>
+            <img
+              class="team-logo-player"
+              src="https://www.mlbstatic.com/team-logos/{{stat.team.id}}.svg"
+            />
+            {{stat.team.name}}
+          </td>
+          <td>{{stat.stat.gamesPlayed}}</td>
+          <td>{{stat.stat.plateAppearances}}</td>
+          <td>{{stat.stat.runs}}</td>
+          <td>{{stat.stat.hits}}</td>
+          <td>{{stat.stat.doubles}}</td>
+          <td>{{stat.stat.triples}}</td>
+          <td>{{stat.stat.homeRuns}}</td>
+          <td>{{stat.stat.rbi}}</td>
+          <td>{{stat.stat.stolenBases}}</td>
+          <td>{{stat.stat.baseOnBalls}}</td>
+          <td>{{stat.stat.strikeOuts}}</td>
+          <td>{{stat.stat.obp}}</td>
+          <td>{{stat.stat.slg}}</td>
+          <td>{{stat.stat.ops}}</td>
+        </tr>
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% endblock %}

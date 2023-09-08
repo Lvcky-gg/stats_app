@@ -89,6 +89,7 @@ tr:nth-child(even) {
 .tablesTwo{
     margin:auto;
     width:100%;
+    margin-bottom: 5%;
 }
 .team-container{
     width:80%;
@@ -192,6 +193,7 @@ tr:nth-child(even) {
 }
 #team-players-logo-player{
     height: 200px;
+    margin-left:2%;
 }
 #team-players-player{
     height:100%;
@@ -345,4 +347,7 @@ tr:nth-child(even) {
 }
 .player-top{
     color:#3E9FCA;
+}
+.team-logo-player{
+    width:30px;
 }
