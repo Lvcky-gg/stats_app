@@ -6,11 +6,34 @@ def get_pitchers(id):
     val = requests.get(f"https://statsapi.mlb.com/api/v1/teams/{id}/roster/Active?hydrate=person(stats(type=season))").json()["roster"]
     print(val)
     for i in range(len(val)):
-        
+        stats = {}
+        era = 0.00
+        ip = 0
+        so = 0
+        bb = 0
+        hr9 = 0
+        ops = 0
         if val[i]["position"]["abbreviation"] == "P":
-        #     era = ""
-        #     if val[i]["person"]:
-        #         # era = val[i]["person"]["stats"][0]["splits"][0]["stat"]["era"]
+            if 'stats' in val[i]["person"]:
+                stats = val[i]["person"]["stats"][0]["splits"][0]["stat"]
+                if 'inningsPitched' in stats:
+                    ip = stats["inningsPitched"]
+                if 'era' in stats:
+                    era = stats["era"]
+                if 'strikeOuts' in stats:
+                    so = stats["strikeOuts"]
+                if 'whip' in stats:
+                    whip = stats["whip"]
+                if 'baseOnBalls' in stats:
+                    bb = stats["baseOnBalls"]
+                if 'homeRunsPer9' in stats:
+                    hr9 = stats["homeRunsPer9"]
+                if 'ops' in stats:
+                    ops = stats["ops"]
+
+
+
+                
 
             
             value = {
@@ -24,15 +47,15 @@ def get_pitchers(id):
                 "weight":val[i]["person"]["weight"],
                 "b":val[i]["person"]["batSide"]["code"],
                 "t":val[i]["person"]["pitchHand"]["code"],
-                # "IP":val[i]["person"]["stats"][0]["splits"][0]["stat"]["inningsPitched"],
-                # "ERA":val[i]["person"]["stats"][0]["splits"][0]["stat"]["era"],
-                # "SO":val[i]["person"]["stats"][0]["splits"][0]["stat"]["strikeOuts"],
-                # "WHIP":val[i]["person"]["stats"][0]["splits"][0]["stat"]["whip"],
-                # "BB":val[i]["person"]["stats"][0]["splits"][0]["stat"]["baseOnBalls"],
-                # "HR9":val[i]["person"]["stats"][0]["splits"][0]["stat"]["homeRunsPer9"],
-                # "OPS":val[i]["person"]["stats"][0]["splits"][0]["stat"]["ops"],
+                "IP":ip,
+                "ERA":era,
+                "SO":so,
+                "WHIP":whip,
+                "BB":bb,
+                "HR9":hr9,
+                "OPS":ops,
             }
     
-        
+            print(val[6]["person"])
             players.append(value)
     return players
