@@ -50,5 +50,10 @@ def leaderboard(request):
     ERA_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=earnedRunAverage").json()["leagueLeaders"]
     IP_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=inningsPitched").json()["leagueLeaders"]
     S_leader = requests.get("https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=strikeOuts").json()["leagueLeaders"]
-    print(ERA_leader)
-    return render(request, "leaderboard.html", {})
+    return render(request, "leaderboard.html", {
+        "hr":HR_leader[0]["leaders"],
+        "ops":OPS_leader[0]["leaders"],
+        "era":ERA_leader[0]["leaders"],
+        "ip":IP_leader[0]["leaders"],
+        "s":S_leader[0]["leaders"],
+    })

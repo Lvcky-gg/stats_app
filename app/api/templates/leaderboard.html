@@ -1,1 +1,156 @@
-{% extends 'index.html' %}{% load static %} {% block content %} {% endblock %}
+{% extends 'index.html' %} {% load static %} {% block content %}
+<div class="team-container">
+  <h2 class="header-teams">Leader Boards</h2>
+  <div class="tablesDiv">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col">Team</th>
+          <th scope="col">Home Run Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in hr %}
+        <tr>
+          <td>
+            <img
+              src="https://content.mlb.com/images/headshots/current/60x60/{{h.person.id}}.png"
+              alt="logo"
+            /><a href="/players/{{h.person.id}}">{{ h.person.fullName }}</a>
+          </td>
+          <td>
+            <img
+              class="logo-for-team"
+              src="https://www.mlbstatic.com/team-logos/{{h.team.id}}.svg"
+            /><a href="/teams/{{h.team.id}}/hitters">{{ h.team.name }}</a>
+          </td>
+          <td>{{h.rank}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col">Team</th>
+          <th scope="col">OPS Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in ops %}
+        <tr>
+          <td>
+            <img
+              src="https://content.mlb.com/images/headshots/current/60x60/{{h.person.id}}.png"
+              alt="logo"
+            /><a href="/players/{{h.person.id}}">{{ h.person.fullName }}</a>
+          </td>
+          <td>
+            <img
+              class="logo-for-team"
+              src="https://www.mlbstatic.com/team-logos/{{h.team.id}}.svg"
+            /><a href="/teams/{{h.team.id}}/hitters">{{ h.team.name }}</a>
+          </td>
+          <td>{{h.rank}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col">Team</th>
+          <th scope="col">ERA Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in era %}
+        <tr>
+          <td>
+            <img
+              src="https://content.mlb.com/images/headshots/current/60x60/{{h.person.id}}.png"
+              alt="logo"
+            /><a href="/players/pitchers/{{h.person.id}}"
+              >{{ h.person.fullName }}</a
+            >
+          </td>
+          <td>
+            <img
+              class="logo-for-team"
+              src="https://www.mlbstatic.com/team-logos/{{h.team.id}}.svg"
+            /><a href="/teams/{{h.team.id}}/hitters">{{ h.team.name }}</a>
+          </td>
+          <td>{{h.rank}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col">Team</th>
+          <th scope="col">IP Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in ip %}
+        <tr>
+          <td>
+            <img
+              src="https://content.mlb.com/images/headshots/current/60x60/{{h.person.id}}.png"
+              alt="logo"
+            /><a href="/players/pitchers/{{h.person.id}}"
+              >{{ h.person.fullName }}</a
+            >
+          </td>
+          <td>
+            <img
+              class="logo-for-team"
+              src="https://www.mlbstatic.com/team-logos/{{h.team.id}}.svg"
+            /><a href="/teams/{{h.team.id}}/hitters">{{ h.team.name }}</a>
+          </td>
+          <td>{{h.rank}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player Name</th>
+          <th scope="col">Team</th>
+          <th scope="col">Strike Out Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in s %}
+        <tr>
+          <td>
+            <img
+              src="https://content.mlb.com/images/headshots/current/60x60/{{h.person.id}}.png"
+              alt="logo"
+            /><a href="/players/{{h.person.id}}">{{ h.person.fullName }}</a>
+          </td>
+          <td>
+            <img
+              class="logo-for-team"
+              src="https://www.mlbstatic.com/team-logos/{{h.team.id}}.svg"
+            /><a href="/teams/{{h.team.id}}/hitters">{{ h.team.name }}</a>
+          </td>
+          <td>{{h.rank}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
