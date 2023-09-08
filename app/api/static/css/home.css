@@ -184,6 +184,14 @@ tr:nth-child(even) {
     background-color: #F7F7F7;
 
 }
+#team-players-logo-player{
+    height: 200px;
+}
+#team-players-player{
+    height:100%;
+    display:flex;
+    flex-direction: row;
+}
 #team-players-img-border{
     display:flex;
     justify-content: center;

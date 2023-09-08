@@ -28,3 +28,6 @@ def team_pitchers(request, id=id):
     teamdetails = team_details(id)
     players = get_pitchers(id)
     return render(request, "team_pitchers.html", { "id":id, "team":teamdetails,"players":players })
+
+def player(request, id=id):
+    return render(request, "player_pitchers.html", { "id":id })
