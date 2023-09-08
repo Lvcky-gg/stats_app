@@ -227,6 +227,15 @@ tr:nth-child(even) {
     width:100%;
     margin-left:5%;
 }
+#player-header{
+    width:50%;
+    margin-left:5%;
+    margin-top:5%;
+
+}
+#player-header-p{
+    color:#F7F7F7;
+}
 #team-header-p{
     color:#F7F7F7;
 }

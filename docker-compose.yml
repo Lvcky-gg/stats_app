@@ -1,0 +1,24 @@
+version: '3.9'
+
+
+services:
+ 
+
+  backend: 
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+      - SECRET=ASDHKULYHMAKJDSjahskdlhgakdwHUIDHAW
+
+    ports:
+      - '8002:8002'
+
+
+    volumes:
+      - ./backend:/app/backend
+

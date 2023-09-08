@@ -1,12 +1,20 @@
-{% extends 'index.html' %} {% load static %}{% block content %}
+{% extends 'index.html' %}{% load static %} {% block content %}
 <div id="team-players-container">
   <div id="team-player-top">
-    <div id="team-players-info">
-      <div>
-        <img src="https://www.mlbstatic.com/team-logos/{{id}}.svg" alt="logo" />
+    <div id="team-players-player">
+      <img
+        id="team-players-logo-player"
+        src="https://content.mlb.com/images/headshots/current/60x60/{{id}}@2x.png"
+        alt="logo"
+      />
+      <div id="player-header">
+        <h1>{{player.fullName}}</h1>
+        <div id="team-player-team-stats">
+          <p id="player-header-p">{{player.primaryPosition.abbreviation}}</p>
+          <p id="team-player-team-rank">{{season.team.name}}</p>
+        </div>
       </div>
-      <div></div>
-      <div></div>
+      <div>Hello</div>
     </div>
   </div>
 </div>
