@@ -12,15 +12,15 @@
       <thead>
         <tr>
           <th>{{div.name}}</th>
-          <th>W</th>
-          <th>L</th>
+          <th><span>W</span></th>
+          <th><span>L</span></th>
           {% comment %}
           <th>P</th>
           {% endcomment %}
-          <th>Pct</th>
-          <th>GB</th>
-          <th>L10</th>
-          <th>DIFF</th>
+          <th><span>Pct</span></th>
+          <th><span>GB</span></th>
+          <th><span>L10</span></th>
+          <th><span>DIFF</span></th>
         </tr>
       </thead>
       <tbody>
@@ -34,15 +34,12 @@
               />{{ team.team.name }}</a
             >
           </td>
-          <td>{{ team.leagueRecord.wins }}</td>
-          <td>{{ team.leagueRecord.losses}}</td>
-          {% comment %}
-          <td>{{ team.leagueRecord.ties }}</td>
-          {% endcomment %}
-          <td>{{ team.leagueRecord.pct }}</td>
-          <td>{{ team.gb }}</td>
-          <td>{{team.l10Record.wins}}-{{team.l10Record.losses}}</td>
-          <td>{{ team.diff }}</td>
+          <td><span>{{ team.leagueRecord.wins }}</span></td>
+          <td><span>{{ team.leagueRecord.losses}}</span></td>
+          <td><span>{{ team.leagueRecord.pct }}</span></td>
+          <td><span>{{ team.gb }}</span></td>
+          <td><span>{{team.l10Record.wins}}-{{team.l10Record.losses}}</span></td>
+          <td><span>{{ team.diff }}</span></td>
         </tr>
         {% endfor %}
       </tbody>
