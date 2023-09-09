@@ -470,6 +470,9 @@ tr:nth-child(even) {
         width:40%;
         display:none;
     }
+    .btn-group{
+        width:20%;
+    }
 
 
   }
