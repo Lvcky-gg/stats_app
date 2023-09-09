@@ -3,4 +3,4 @@ djangorestframework==3.14.0
 requests
 psycopg2-binary
 dj-database-url
-gunicorn = "*"
+gunicorn 
