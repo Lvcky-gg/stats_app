@@ -408,6 +408,7 @@ tr:nth-child(even) {
     }
     .tablesTwo{
         width:100%;
+        margin-top:20%;
     }
     #team-player-top{
         width:80%;
@@ -420,6 +421,55 @@ tr:nth-child(even) {
         flex-direction: row;
         width:80%;
     }
+    #team-header{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap:5%;
+    }
 
  
+  }
+  @media (max-width: 600px) {
+    #team-players-container{
+        width:100%;
+    }
+    #team-player-top{
+        display:flex;
+        flex-direction: column;
+    }
+    #team-players-info{
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .tablesTwo{
+        margin-top:40%;
+    }
+    #team-players-player{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:50%;
+    }
+    #player-page-stats{
+        display:flex;
+        flex-direction: row;
+    }
+    .tablesThree{
+        margin-top:100%;
+    }
+    #header{
+        height: 100px;
+    }
+    #header>a{
+        width:40%;
+        display:none;
+    }
+
+
   }
