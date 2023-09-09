@@ -2,7 +2,9 @@
 
 set -o errexit
 
-poetry install
+
+pipenv install -r requirements.txt
 python manage.py collectstatic --noinput
+python manage.py makemigrations
 python manage.py migrate
 
