@@ -6,7 +6,7 @@ services:
 
   backend: 
     build: 
-      context: ./backend
+      context: ./app
       dockerfile: Dockerfile
 
     ports:
