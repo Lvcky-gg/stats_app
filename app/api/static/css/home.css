@@ -361,3 +361,65 @@ tr:nth-child(even) {
 .team-logo-player{
     width:30px;
 }
+
+@media (max-width: 1000px) {
+    #news-container-child{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    #header{
+        justify-content: center;
+    }
+    #header>div{
+        display:flex;
+        flex-direction:column;
+    }
+    .btn-group{
+        display:flex;
+        flex-direction: column;
+        bottom:100%;
+    }
+    .btn-group>div{
+        border-radius:25%;
+        width:150%;
+    }
+    .btn-group>div>a{
+        margin:auto;
+    }
+    .header-teams{
+        max-width: fit-content;
+        margin:auto;
+        left:0%;
+        top:10%;
+        
+    }
+    .news{
+        width:100%;
+        margin:auto;
+        margin-bottom: 5%;
+    }
+    .table{
+        width:100%;
+    }
+    .tables{
+        width:100%;
+    }
+    .tablesTwo{
+        width:100%;
+    }
+    #team-player-top{
+        width:80%;
+    }
+    #player-page-stats{
+        flex-direction:column;
+    }
+    #player-page-stats>div{
+        display:flex;
+        flex-direction: row;
+        width:80%;
+    }
+
+ 
+  }
