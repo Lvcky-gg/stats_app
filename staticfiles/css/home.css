@@ -1,0 +1,478 @@
+
+
+
+body {
+    background-color: #224B88;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, th {
+    color:#F7F7F7;
+    font-family: 'IBM Plex Sans wght@600', sans-serif;
+    width:fit-content;
+    line-height: -1;
+}
+a {
+    text-decoration: none;
+    color: #244D87;
+    font-weight: 600;
+    line-height: -1;
+}
+p{
+    line-height: -1;
+}
+thead {
+    background-color: #1F437B;
+}
+th {
+    background-color: #3E9FCA;
+
+    
+    
+}
+
+ table {
+    background-color: #3E9FCA;
+    width:49%;
+    border-width: 0px;
+    padding:5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-spacing: 0px;
+    
+ }
+ td{
+    padding:1%;
+    
+ }
+span {
+    margin:auto;
+}
+tr:nth-child(odd) {
+    background-color:#F7F7F7;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+#header {
+    background-color: #1F437B;
+    display:flex;
+    justify-content: space-around;
+    height:60px;
+    padding:1%;
+}
+#header>a{
+    margin-right:40%;
+
+}
+#header>div{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width:12%;
+}
+#header>div>a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:0 1%;
+}
+.tablesDiv{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:5%;
+    margin-top:4%;
+    margin-bottom:5%;
+    gap: 15px;
+}
+.tablesTwo{
+    margin:auto;
+    width:100%;
+    margin-bottom: 5%;
+}
+.team-container{
+    width:80%;
+    margin:auto;
+}
+.header-teams{
+    position: relative;
+    width:fit-content;
+    top: 1.6em;
+    left: 3.1em;
+
+}
+.anchor-team-name{
+    text-decoration: none;
+    color:#244D87;
+    font-weight: 600;
+    
+}
+.logo>img{
+   height:100%;
+   margin-left:5%;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.logo-for-team{
+    height:20px;
+    padding-left:2px;
+    padding-right:5px;
+}
+#news-container-child {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+  
+    margin:auto;
+    margin-top:5%;
+    gap:15px;
+    margin-bottom: 10%;
+    
+}
+.news{
+    width:24%;
+    background-color: #F7F7F7;
+    border-radius: 2%;
+    padding-bottom: 1%;
+    overflow:hidden;
+  
+    
+}
+.article-image{
+    width:100%;
+    margin:auto;
+}
+.news-heading {
+    color:#244D87;
+    padding:2%;
+    font-weight: 600;
+    max-height:20%;
+    
+}
+.article-author{
+    color:black;
+    width:fit-content;
+    margin:auto;
+    height:20px;
+    
+}
+.header-news {
+    left:15%
+}
+
+
+#team-players-container{
+    width:80%;
+    margin:auto;
+}
+#team-player-top{
+    height:200px;
+
+    margin:auto;
+    margin-top:4%;
+}
+#team-players-info{
+    width:35%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:row;
+
+}
+
+#team-players-logo-team{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: #F7F7F7;
+
+}
+#team-players-logo-player{
+    height: 200px;
+    margin-left:2%;
+}
+#team-players-player{
+    height:100%;
+    display:flex;
+    flex-direction: row;
+}
+#team-players-img-border{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    width: 120px;
+    height:120px;
+    margin:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+#team-player-team-stats{
+    display:flex;
+    position:relative;
+    bottom:15%;
+}
+#team-player-team-stats>p{
+    margin:1%;
+    
+}
+#team-player-team-rank{
+    color:#3E9FCA;
+    font-weight: 400;
+}
+#team-header{
+    width:100%;
+    margin-left:5%;
+}
+#player-header{
+    width:50%;
+    margin-left:5%;
+    margin-top:5%;
+
+}
+#player-header-p{
+    color:#F7F7F7;
+}
+#team-header-p{
+    color:#F7F7F7;
+}
+.btn-group {
+    position:relative;
+    left:80%;
+    bottom:40%;
+    display:flex;
+    flex-direction:row;
+    width:10%;
+}
+
+.btn-groupLholder{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%;
+    margin:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+    background-color: #3E9FCA;
+    padding:3%;
+    border-radius: 10px;
+    z-index: 2;
+    position:relative;
+    right:10%;
+}
+.btn-groupLholder>a {
+    color:#F7F7F7;
+}
+.btn-groupDholder{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%;
+    margin:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+    background-color: #f7f7f7;
+    padding:3%;
+    border-radius: 0px 10px 10px 0px;
+    position:relative;
+    right:15%;
+    z-index: 1;
+}
+.btn-groupDholder>a {
+    color:#3E9FCA;
+    margin-left:7%;
+}
+
+
+
+
+.btn-groupPholder{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%;
+    margin:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+    background-color: #f7f7f7;
+    padding:3%;
+    border-radius: 10px;
+    z-index: 2;
+    position:relative;
+    right:10%;
+}
+.btn-groupPholder>a {
+    color:#3E9FCA;
+}
+.btn-groupHholder{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%;
+    margin:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+    background-color: #3E9FCA;
+    padding:3%;
+    border-radius: 0px 10px 10px 0px;
+    position:relative;
+    right:15%;
+    z-index: 1;
+}
+.btn-groupHholder>a {
+    color:#f7f7f7;
+    margin-left:7%;
+}
+
+#player-page-stats{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    width:80%;
+}
+#player-page-stats>div{
+    width:10%;
+    height:10%;
+
+}
+
+.player-bot {
+    color:#f7f7f7
+}
+.player-top{
+    color:#3E9FCA;
+}
+.team-logo-player{
+    width:30px;
+}
+
+@media (max-width: 1000px) {
+    #news-container-child{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    #header{
+        justify-content: center;
+    }
+    #header>div{
+        display:flex;
+        flex-direction:column;
+    }
+    .btn-group{
+        display:flex;
+        flex-direction: column;
+        bottom:100%;
+    }
+    .btn-group>div{
+        border-radius:25%;
+        width:150%;
+    }
+    .btn-group>div>a{
+        margin:auto;
+    }
+    .header-teams{
+        max-width: fit-content;
+        margin:auto;
+        left:0%;
+        top:10%;
+        
+    }
+    .news{
+        width:100%;
+        margin:auto;
+        margin-bottom: 5%;
+    }
+    .table{
+        width:100%;
+    }
+    .tables{
+        width:100%;
+    }
+    .tablesTwo{
+        width:100%;
+        margin-top:20%;
+    }
+    #team-player-top{
+        width:80%;
+    }
+    #player-page-stats{
+        flex-direction:column;
+    }
+    #player-page-stats>div{
+        display:flex;
+        flex-direction: row;
+        width:80%;
+    }
+    #team-header{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap:5%;
+    }
+
+ 
+  }
+  @media (max-width: 600px) {
+    #team-players-container{
+        width:100%;
+    }
+    #team-player-top{
+        display:flex;
+        flex-direction: column;
+    }
+    #team-players-info{
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .tablesTwo{
+        margin-top:40%;
+    }
+    #team-players-player{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:50%;
+    }
+    #player-page-stats{
+        display:flex;
+        flex-direction: row;
+    }
+    .tablesThree{
+        margin-top:100%;
+    }
+    #header{
+        height: 100px;
+    }
+    #header>a{
+        width:40%;
+        display:none;
+    }
+    .btn-group{
+        width:20%;
+    }
+
+
+  }
