@@ -9,6 +9,9 @@ djangorestframework = "==3.14.0"
 requests = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
+dj-database-url = "*"
+whitenoise = {extras = ["brotli"], version = "*"}
+
 [dev-packages]
 
 [requires]

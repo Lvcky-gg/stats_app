@@ -1,0 +1,1 @@
+ gunicorn --preload wsgi:application 
