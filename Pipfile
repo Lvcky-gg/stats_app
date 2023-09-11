@@ -7,10 +7,11 @@ name = "pypi"
 django = "==4.2.4"
 djangorestframework = "==3.14.0"
 requests = "*"
-psycopg2-binary = "2.9.5"
-gunicorn = "20.1.0"
-dj-database-url = "1.2.0"
-whitenoise = {extras = ["brotli"], version = "*"}
+psycopg2-binary = "==2.9.5"
+gunicorn = "==20.1.0"
+dj-database-url = "==1.2.0"
+whitenoise = "*"
+brotli = "*"
 
 [dev-packages]
 
