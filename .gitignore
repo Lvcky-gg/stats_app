@@ -2,3 +2,4 @@
 .env
 /staticfiles
 db.sqlite2
+pipfile.lock
