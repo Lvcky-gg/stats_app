@@ -3,7 +3,7 @@
 
 ## Start
 ### Run these at root of project
-- 1. Make a .env file @ root and copy contents of .env.example into it
+- 1. Make .env file @ root and copy contents of .env.example into it
 - 2. pipenv shell
 - 3. ./build.sh
 - 4. ./start_prod.sh
