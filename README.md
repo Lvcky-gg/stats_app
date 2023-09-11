@@ -51,3 +51,8 @@ plugins=(
 ## CONSIDERATIONS
 #### If I were to do it over, I would use Svelte to build the static files, this would save time on development
 #### I could have set up an API to pull the data for the statsAPI and load it into a database, but this seemed an expensive option. I opted to not do so and just serve the data from the statsAPI directly to the app
+
+## COMMANDS
+- ./build.sh This command will build the static file and apply migrations
+- ./start.sh This command starts the app with pip
+- ./start_prod.sh This command starts the app with gunicorn
