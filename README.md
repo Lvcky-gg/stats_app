@@ -8,16 +8,20 @@
 - 3. ./build.sh
 - 4. ./start_prod.sh
 ### To get needed items
-- install Python Ubuntu ```
+- install Python Ubuntu 
+```
 sudo apt install python3 python3-pip
 ```
-- install Python Fedora ```
+- install Python Fedora 
+```
 sudo dnf install python3 python3-pip
 ```
-- install Python Arch ```
+- install Python Arch 
+```
 sudo pacman -S python3-pip
 ```
-- install pipenv ```
+- install pipenv 
+```
 pip install --user pipenv
 ```
 ### *** NOTE: If you are using zsh shell, some configuration may be required
