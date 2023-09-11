@@ -1,5 +1,5 @@
 /venv
 .env
 /staticfiles
-db.sqlite2
+db.sqlite3
 Pipfile.lock
